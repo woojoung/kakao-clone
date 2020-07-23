@@ -3,21 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inline Example</title>
+    <title>Position</title>
     <style>
-      .box {
+      body,
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 400%;
+        background-color: red;
+      }
+      /* Position Fixed
+      #boxOne {
+        height: 300px;
+        width: 300px;
         background-color: yellow;
-        width: 200px;
-        height: 200px;
-        border: 1px solid black;
-        display: inline-block;
-        /* inline: remove all properties of box */
+        position: static;
+      }
+      #boxTwo {
+        height: 300px;
+        width: 300px;
+        background-color: green;
+        position: fixed;
+        bottom: 30px;
+        left: 500px;
+      }
+      */
+      .abs-box {
+        width: 400px;
+        height: 400px;
+        background-color: yellowgreen;
+        position: relative;
+      }
+      .abs-child {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: absolute;
+        right: 10px;
+        top: 10px;
       }
     </style>
   </head>
   <body>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
+    <div class="abs-box">
+      <div class="abs-child"></div>
+    </div>
+    <!-- Position Fixed
+    <div id="boxOne">
+      <div class="box-child"></div>
+    </div>
+    <div id="boxTwo">
+      <div class="box-child"></div>
+    </div> -->
   </body>
 </html>
