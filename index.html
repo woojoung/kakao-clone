@@ -3,44 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flex</title>
+    <title>Selectors and Pseudo Selectors</title>
     <style>
-      body,
-      html {
-        height: 100%;
+      /* input[type="submit"] {
+        background-color: red;
       }
-      .father {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        height: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
+      input[required="required"] {
+        background-color: red;
+      } */
+      .container > .box {
+        background-color: yellow;
       }
       .box {
-        background-color: red;
-        width: 200px;
-        height: 200px;
-        border: 1px solid black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
+        border: 1px solid yellow;
       }
+      .box {
+        background-color: yellowgreen;
+        display: block;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .child {
+        background-color: purple;
+        width: 40px;
+      }
+      /* .box:last-child {
+        background-color: pink;
+      }
+      .box:nth-child(2n) {
+        background-color: palegreen;
+      } */
     </style>
   </head>
   <body>
-    <div class="father">
-      <div class="box">1</div>
-      <div class="box">2</div>
-      <div class="box">3</div>
-      <div class="box">4</div>
-      <div class="box">5</div>
-      <div class="box">6</div>
-      <div class="box">7</div>
-      <div class="box">8</div>
-      <div class="box">9</div>
-      <div class="box">10</div>
+    <div class="container">
+      <div class="box">
+        <div class="box child"></div>
+      </div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box">
+        <input type="password" required="required" />
+        <input type="submit" required="required" />
+      </div>
     </div>
   </body>
 </html>
