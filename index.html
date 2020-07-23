@@ -3,23 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transitions</title>
+    <title>CSS States</title>
     <style>
       .box {
-        background-color: green;
+        background-color: beige;
         font-size: 40px;
-        color: white;
-        transition: all 0.5s ease-in-out;
       }
       .box:hover {
-        background-color: red;
-        color: blue;
+        background-color: pink;
+      }
+      .box:active {
+        background-color: greenyellow;
+      }
+      .box:focus {
+        background-color: blue;
       }
     </style>
   </head>
   <body>
-    <span class="box">
-      Text
-    </span>
+    <textarea class="box">
+      Lorem
+    </textarea>
   </body>
 </html>
