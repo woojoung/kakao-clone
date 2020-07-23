@@ -3,17 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transformations</title>
+    <title>Animations</title>
     <style>
       .box {
         width: 100px;
         height: 100px;
         background: red;
-        transition: transform 0.5s ease-in-out;
+        animation: 3s scaleAndRotateSquare infinite ease-in-out;
       }
-      .box:hover {
-        /* transform: rotate(30deg); */
-        transform: rotate(1turn) scale(0.5, 0.5);
+      /* create animations with using keyframes */
+      /* @keyframes scaleAndRotateSquare {
+        from {
+          transform: none;
+        }
+        to {
+          transform: rotate(1turn) scale(0.5, 0.5);
+        }
+      } */
+
+      @keyframes scaleAndRotateSquare {
+        0% {
+          transform: none;
+        }
+        50% {
+          transform: rotate(1turn) scale(0.5, 0.5);
+          color: white;
+        }
+        100% {
+          transform: none;
+          color: blue;
+        }
       }
     </style>
   </head>
