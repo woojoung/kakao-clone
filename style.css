@@ -1,0 +1,13 @@
+/* css, part1: selector, part2: property
+selector {
+  properties: something;
+}
+*/
+
+h1 {
+  color: green;
+  font-size: 50px;
+}
+body {
+  background-color: beige;
+}
