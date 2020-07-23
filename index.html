@@ -3,54 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selectors and Pseudo Selectors</title>
+    <title>CSS States</title>
     <style>
-      /* input[type="submit"] {
-        background-color: red;
-      }
-      input[required="required"] {
-        background-color: red;
-      } */
-      .container > .box {
-        background-color: yellow;
-      }
       .box {
-        border: 1px solid yellow;
+        background-color: beige;
+        font-size: 40px;
       }
-      .box {
-        background-color: yellowgreen;
-        display: block;
-        height: 100px;
-        border: 1px solid black;
-      }
-      .child {
-        background-color: purple;
-        width: 40px;
-      }
-      /* .box:last-child {
+      .box:hover {
         background-color: pink;
       }
-      .box:nth-child(2n) {
-        background-color: palegreen;
-      } */
+      .box:active {
+        background-color: greenyellow;
+      }
+      .box:focus {
+        background-color: blue;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="box">
-        <div class="box child"></div>
-      </div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box"></div>
-      <div class="box">
-        <input type="password" required="required" />
-        <input type="submit" required="required" />
-      </div>
-    </div>
+    <textarea class="box">
+      Lorem
+    </textarea>
   </body>
 </html>
