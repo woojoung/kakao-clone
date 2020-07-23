@@ -3,34 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Box Model</title>
+    <title>Inline Example</title>
     <style>
-      body,
-      html {
-        padding: 0;
-        margin: 0;
-        background-color: green;
-        height: 100%;
-      }
       .box {
         background-color: yellow;
-        width: 50%;
-        height: 50%;
-        padding: 20px 10px 5px 5px;
-      }
-      .inside-box {
-        background-color: blue;
-        width: 50%;
-        height: 50%;
-        border-width: 5px;
-        border-color: red;
-        border-style: dashed;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        display: inline-block;
+        /* inline: remove all properties of box */
       }
     </style>
   </head>
   <body>
-    <div class="box">
-      <div class="inside-box">inside</div>
-    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
   </body>
 </html>
